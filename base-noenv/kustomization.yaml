@@ -1,0 +1,4 @@
+resources:
+  - ./deploy-noenv.yaml
+
+namespace: banana

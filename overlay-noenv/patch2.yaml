@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test2-deployment
+spec:
+  template:
+    spec:
+      containers:
+      - name: test2
+        env:
+          - name: PEAR
+            value: "not an apple"
+          - name: PLUM
+            valueFrom:
+              configMapKeyRef:
+                name: fruitconf
+                key: plumkey

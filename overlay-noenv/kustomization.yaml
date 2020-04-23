@@ -1,0 +1,6 @@
+bases:
+  - ../base-noenv/
+
+patchesStrategicMerge:
+  - ./patch1.yaml
+  - ./patch2.yaml
