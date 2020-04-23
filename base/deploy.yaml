@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-deployment
+  labels:
+    app: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test
+  template:
+    metadata:
+      labels:
+        app: test
+    spec:
+      containers:
+      - name: test
+        image: djones6/test
+        imagePullPolicy: Always 
+        ports:
+          - containerPort: 8080
+        env:
+          - name: FOO
+            value: BAR
+          - name: BAT
+            valueFrom:
+              configMapKeyRef:
+                name: batconf
+                key: batkey
+        livenessProbe:
+          initialDelaySeconds: 5
+          httpGet:
+            path: /health
+            port: 8080
