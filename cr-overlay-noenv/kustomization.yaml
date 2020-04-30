@@ -1,0 +1,8 @@
+bases:
+  - ../cr-base-noenv/
+
+patchesStrategicMerge:
+  - ./patch1.yaml
+#  - ./patch2.yaml
+
+# Strategic merge can add an env block to a CR that does not already have one.

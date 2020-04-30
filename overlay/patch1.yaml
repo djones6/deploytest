@@ -9,6 +9,6 @@ spec:
       - name: test
         env:
           - name: APPLE
-            value: sweet
+            value: patch1
           - name: BANANA
-            value: yellow
+            value: patch1

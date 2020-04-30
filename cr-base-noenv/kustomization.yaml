@@ -1,0 +1,4 @@
+resources:
+  - ./cr-noenv.yaml
+
+namespace: banana

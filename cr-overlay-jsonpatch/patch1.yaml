@@ -1,0 +1,10 @@
+- op: add
+  path: "/spec/template/spec/containers/0/env/-"
+  value:
+    name: APPLE
+    value: patch1
+- op: add
+  path: "/spec/template/spec/containers/0/env/-"
+  value:
+    name: BANANA
+    value: patch1

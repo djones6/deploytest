@@ -4,3 +4,6 @@ bases:
 patchesStrategicMerge:
   - ./patch1.yaml
   - ./patch2.yaml
+
+  # Strategic merge is able to add two sets of env entries where there is no existing env section
+  # defined in the base deployment.

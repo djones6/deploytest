@@ -1,0 +1,10 @@
+bases:
+  - ../cr-base/
+
+patchesStrategicMerge:
+  - ./patch1.yaml
+  - ./patch2.yaml
+  - ./patch3.yaml
+
+  # Strategic merge cannot apply multiple patches that apply to the same element - reports conflict
+  # (kustomize does not know that the custom env element can be treated as a map, or what the map's key is)

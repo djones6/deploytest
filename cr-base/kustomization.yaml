@@ -1,0 +1,4 @@
+resources:
+  - ./cr.yaml
+
+namespace: banana

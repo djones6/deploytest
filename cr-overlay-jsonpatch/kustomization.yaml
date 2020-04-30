@@ -1,0 +1,24 @@
+bases:
+  - ../cr-base/
+
+patchesJson6902:
+  - target:
+      group: mytype
+      version: v1alpha1
+      kind: MyType
+      name: test-cr
+    path: ./patch1.yaml
+  - target:
+      group: mytype
+      version: v1alpha1
+      kind: MyType
+      name: test-cr
+    path: ./patch2.yaml
+  - target:
+      group: mytype
+      version: v1alpha1
+      kind: MyType
+      name: test-cr
+    path: ./patch2.yaml
+ 
+  # JSON patch also cannot apply multiple patches that apply to the same element - reports conflict

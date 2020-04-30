@@ -1,7 +1,7 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: mytype/v1alpha1
+kind: MyType
 metadata:
-  name: test2-deployment
+  name: test-cr
 spec:
   template:
     spec:

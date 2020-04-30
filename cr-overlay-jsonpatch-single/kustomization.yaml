@@ -1,0 +1,14 @@
+bases:
+  - ../cr-base/
+
+patchesJson6902:
+  - target:
+      group: mytype
+      version: v1alpha1
+      kind: MyType
+      name: test-cr
+    path: ./patch.yaml
+ 
+  # JSON patch cannot modify an existing value by name - must be by index (fragile)
+  # Applying a 'replace' to the wrong index patches the wrong entry.
+  # Applying an 'add' with the same key (env name) results in a duplicate.

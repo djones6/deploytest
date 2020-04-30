@@ -1,0 +1,32 @@
+# Applying this if there is an existing env in the base will erase it...
+# - op: add
+#   path: "/spec/template/spec/containers/0/env"
+#   value: []
+- op: add
+  path: "/spec/template/spec/containers/0/env/-"
+  value:
+    name: APPLE
+    value: patch1
+- op: add
+  path: "/spec/template/spec/containers/0/env/-"
+  value:
+    name: BANANA
+    value: patch1
+- op: add
+  path: "/spec/template/spec/containers/0/env/-"
+  value:
+    name: PEAR
+    value: patch2
+- op: add
+  path: "/spec/template/spec/containers/0/env/-"
+  value:
+    name: PLUM
+    valueFrom:
+      configMapKeyRef:
+        name: patch2
+        key: plumkey
+- op: replace
+  path: "/spec/template/spec/containers/0/env/0"
+  value:
+    name: FOO
+    value: patch3

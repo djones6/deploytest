@@ -5,3 +5,6 @@ patchesStrategicMerge:
   - ./patch1.yaml
   - ./patch2.yaml
   - ./patch3.yaml
+
+  # Strategic merge is able to apply all three patches additively. Patches 1 and 2 add new values to env,
+  # patch 3 modifies an existing value in the base deployment.

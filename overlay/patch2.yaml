@@ -9,9 +9,9 @@ spec:
       - name: test
         env:
           - name: PEAR
-            value: "not an apple"
+            value: patch2
           - name: PLUM
             valueFrom:
               configMapKeyRef:
-                name: fruitconf
+                name: patch2
                 key: plumkey

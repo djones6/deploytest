@@ -1,7 +1,7 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: mytype/v1alpha1
+kind: MyType
 metadata:
-  name: test-deployment
+  name: test-cr
   labels:
     app: test
 spec:
@@ -20,14 +20,6 @@ spec:
         imagePullPolicy: Always 
         ports:
           - containerPort: 8080
-        env:
-          - name: FOO
-            value: BAR
-          - name: BAT
-            valueFrom:
-              configMapKeyRef:
-                name: unpatched
-                key: batkey
         livenessProbe:
           initialDelaySeconds: 5
           httpGet:
