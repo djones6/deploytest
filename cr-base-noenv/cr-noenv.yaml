@@ -17,11 +17,5 @@ spec:
       containers:
       - name: test
         image: djones6/test
-        imagePullPolicy: Always 
         ports:
           - containerPort: 8080
-        livenessProbe:
-          initialDelaySeconds: 5
-          httpGet:
-            path: /health
-            port: 8080
